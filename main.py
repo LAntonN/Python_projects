@@ -17,24 +17,22 @@ direction = input("Which direction? ").lower()
 match direction:
     case "north":
         print("Up")
-
     case "south":
         print("Down")
     case "east":
         print("Right")
     case "west":
-        pring("Left")
+        print("Left")
     case _:
         print("it's not a valid ditection")
 
       #switch statment for numbers
 
-num = input("Provide a number: "):
+num = 4;
 
-match: 
-    case num>0:
-        print("yyour number is grated than Zero")
-    case num<0:
-        print("It's a minus mate")
-    case _:
-        pring("not a valid number")
+match num: 
+  case  4:
+     print("your number is 3")
+  
+  case _:
+    print("not a valid number")
