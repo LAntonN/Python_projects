@@ -11,28 +11,28 @@
 #    print("this is hardware shop!")
 
 
-direction = input("Which direction? ").lower()
+#direction = input("Which direction? ").lower()
 
 
-match direction:
-    case "north":
-        print("Up")
-    case "south":
-        print("Down")
-    case "east":
-        print("Right")
-    case "west":
-        print("Left")
-    case _:
-        print("it's not a valid ditection")
+#match direction:
+#    case "north":
+#        print("Up")
+# .  case "south":
+#print("Down")
+#    case "east":
+ #       print("Right")
+#    case "west":
+#        print("Left")
+##    case _:
+#        print("it's not a valid ditection")
 
       #switch statment for numbers
 
-num = 4;
+# num = 4;
 
-match num: 
-  case  4:
-     print("your number is 3")
+#match num: 
+ # case  4:
+#     print("your number is 3")
   
-  case _:
-    print("not a valid number")
+#  case _:
+ #   print("not a valid number")
