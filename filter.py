@@ -19,16 +19,12 @@ for student in students:
 filter_list = list(filter(lambda student: student.score < 0.7, students))
 print (filter_list);
 
-
-
-
-
-
-
-
-
-
 # Challenge
 # Use filter to list all even numbers
 
 numbers = [1,2,3,4,5]
+
+
+even_numbers = list(filter(lambda number: number%2 == 0, numbers))
+
+print(even_numbers)
