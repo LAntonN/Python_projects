@@ -40,4 +40,7 @@ class Desk(Office):
 desk1 = Desk("name")
 print(desk1)
 
-
+class Update:
+    def __init__(self, name):
+        print("update")
+        self.name = name
