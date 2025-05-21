@@ -16,5 +16,4 @@ if frotune_number == 2:
 if frotune_number == 3:
     fortune_text = 'You will get merried this year!'
 
-print(f'{fortune_text} Your Lucky number is: {frotune_number}t
-      '
+print(f'{fortune_text} Your Lucky number is: {frotune_number})
