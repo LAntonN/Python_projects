@@ -1,0 +1,59 @@
+import pickle
+import sys
+
+file_name = "todo_pickel_data.txt"
+todos = []
+
+#Read File
+
+try:
+    file = open(file_name, "rb")
+    todos = pickle.load(file)
+    file.close()
+except:
+    pass
+
+print(todos)
+#Add Todo
+if len(sys.argv) >= 3 and sys.argv[1].lower() == "add":
+ 
+    todos.append(f"{sys.argv[2]}\n")
+    #print(f"Added: {todo_item}\n")
+
+
+
+#Remove Todo
+if len(sys.argv) >= 3 and sys.argv[1].lower() == "remove":
+    try:
+       index_to_delete = int(sys.argv[2])
+       if index_to_delete > 0:
+           index_to_delete -= 1
+           del(todos[index_to_delete])
+       else:
+           print("number needs to be bigger than 0 and be in the list") 
+    except Exception as e:
+        print(e) 
+        sys.exit(1)
+
+
+print(todos)
+#Save File
+file = open(file_name, "wb")
+pickle.dump(todos, file)
+
+file.close()
+#Print List
+if len(todos) == 0:
+    print("you are free, Run!!!")
+else:
+    print("\nHere's your ToDo list:\n")
+    for x in range(len(todos)):
+        print(f"{x + 1}. {todos[x]}", end="")
+
+
+
+#Print Commands
+print("\n*******************************\n")
+print(f"To view TODos: \n{sys.argv[0]}")
+print(f"To  add a TODos: \n{sys.argv[0]} add \"Clean Room\"\n")
+print(f"To remove or complete TODO: \n{sys.argv[0]} remove 2\n")
